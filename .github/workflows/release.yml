@@ -17,9 +17,11 @@ jobs:
     name: "Release new package version"
     steps:
       - name: Checkout
+        if: github.ref == 'refs/heads/master'
         uses: actions/checkout@v4
       - name: Publish Tag
         id: semantic
+        if: github.ref == 'refs/heads/master'
         uses: cycjimmy/semantic-release-action@v4
         with:
           extra_plugins: |
