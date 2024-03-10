@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/plumthedev/php-cloudwatch-logger/compare/v1.0.1...v1.0.2) (2024-03-10)
+
+
+### Bug Fixes
+
+* **logger:** Add PHPStan type for logger config array ([535cad5](https://github.com/plumthedev/php-cloudwatch-logger/commit/535cad5da6ce23ea7208c7dd1438510462d43ca9))
+
 ## [1.0.1](https://github.com/plumthedev/php-cloudwatch-logger/compare/v1.0.0...v1.0.1) (2024-03-05)
 
 
