@@ -7,7 +7,7 @@ run:
 	docker run -ti --rm --entrypoint /bin/bash --volume $$(pwd):/opt/project --name=php-cloudwatch-logger php-cloudwatch-logger:develop
 
 test:
-	docker run -ti --entrypoint /opt/project/vendor/bin/phpunit --volume $$(pwd):/opt/project php-cloudwatch-logger:develop tests
+	docker run -ti --entrypoint /opt/project/vendor/bin/phpunit --volume $$(pwd):/opt/project php-cloudwatch-logger:develop tests --coverage-text
 
 cs-check:
 	docker run -ti --entrypoint /opt/project/vendor/bin/phpcs --volume $$(pwd):/opt/project php-cloudwatch-logger:develop --standard=phpcs.xml --cache=.phpcs.cache --colors -sp

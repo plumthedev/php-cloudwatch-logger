@@ -10,6 +10,22 @@ use Monolog\Formatter\FormatterInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 
+/**
+ * @phpstan-type CloudwatchLoggerConfigArray array{
+ *      name: string|null,
+ *      region: string|null,
+ *      version: string|null,
+ *      credentials: array{
+ *          key: string,
+ *          secret: string,
+ *      },
+ *      group_name: string,
+ *      stream_name: string,
+ *      retention_days: int|null,
+ *      batch_size: int|null,
+ *      formatter: class-string<FormatterInterface>|null,
+ * }
+ */
 class PhpCloudwatchLogger
 {
     public function __construct(private readonly LoggerFactory $factory, private readonly ContainerInterface $container)
@@ -31,21 +47,7 @@ class PhpCloudwatchLogger
         return null;
     }
 
-    /** @param array{
-     *      name: string|null,
-     *      region: string|null,
-     *      version: string|null,
-     *      credentials: array{
-     *          key: string,
-     *          secret: string,
-     *      },
-     *      group_name: string,
-     *      stream_name: string,
-     *      retention_days: int|null,
-     *      batch_size: int|null,
-     *      formatter: class-string<FormatterInterface>|null,
-     * } $config
-     */
+    /** @param CloudwatchLoggerConfigArray $config */
     public function __invoke(array $config): LoggerInterface
     {
         return $this->factory->createCloudwatchLogger(
