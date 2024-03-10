@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/plumthedev/php-cloudwatch-logger/compare/v1.0.2...v1.0.3) (2024-03-10)
+
+
+### Bug Fixes
+
+* **logger:** Allow nullable fields in logger array config ([3f8d49f](https://github.com/plumthedev/php-cloudwatch-logger/commit/3f8d49fbb593f5108c6ee60ff3e52b3e3c8a9db8))
+
 ## [1.0.2](https://github.com/plumthedev/php-cloudwatch-logger/compare/v1.0.1...v1.0.2) (2024-03-10)
 
 
