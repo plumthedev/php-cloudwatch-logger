@@ -1,5 +1,11 @@
 # PHP Cloudwatch Logger
 
+![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+![PhpStorm](https://img.shields.io/badge/phpstorm-143?style=for-the-badge&logo=phpstorm&logoColor=black&color=black&labelColor=darkorchid)
+
+![example workflow](https://github.com/plumthedev/php-cloudwatch-logger/actions/workflows/quality_check.yml/badge.svg)
+![tests coverage](https://raw.githubusercontent.com/plumthedev/php-cloudwatch-logger/image-data/coverage.svg)
+
 ## Introduction
 
 PHP Cloudwatch Logger is a PHP library designed for logging to the AWS Cloudwatch service. It offers a seamless way to track various types of information from your PHP application directly to AWS Cloudwatch.
