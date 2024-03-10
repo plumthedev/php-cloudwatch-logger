@@ -12,6 +12,16 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.2
+      - name: Build package
+        run: composer install --no-interaction --no-progress
+      - name: PHPUnit
+        run: ./vendor/bin/phpunit tests --coverage-clover clover.xml
       - name: Generate Badge
         uses: timkrase/phpunit-coverage-badge@v1.2.1
         with:
